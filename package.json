@@ -1,0 +1,29 @@
+{
+  "name": "hono-workers",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --mode client && vite build",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "preview": "wrangler dev",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "private": true,
+  "dependencies": {
+    "hono": "^4.13.9",
+    "honox": "0.1.61"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260712.1",
+    "@hono/vite-build": "^1.11.1",
+    "@hono/vite-dev-server": "^0.26.1",
+    "@tailwindcss/vite": "^4.3.2",
+    "@vitest/coverage-v8": "^4.1.11",
+    "happy-dom": "^20.14.5",
+    "tailwindcss": "^4.3.2",
+    "vite": "^8.1.4",
+    "vitest": "^4.1.11",
+    "wrangler": "^4.110.0"
+  }
+}
