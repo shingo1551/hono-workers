@@ -2,6 +2,10 @@
 
 HonoX を使った Cloudflare Workers 向けのサンプルアプリケーションです。トップページではクエリ文字列 `name` を使った挨拶と、カウンターを表示します。
 
+## 公開 URL
+
+https://hono-workers.shingo1551.workers.dev
+
 ## 必要な環境
 
 - Node.js
