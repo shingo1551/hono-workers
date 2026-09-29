@@ -13,12 +13,14 @@ const clientPlugin: Plugin = {
       assetsDir: 'static',
       manifest: true
     },
+    // HonoX's built-in client plugin sets the deprecated esbuild option; use Oxc for JSX instead.
     oxc: { jsx: { runtime: 'automatic', importSource: 'hono/jsx/dom' } }
   })
 }
 
 export default defineConfig({
   plugins: [
+    // Keep HonoX's other plugins while replacing its client build plugin with the Oxc version above.
     ...honox({ devServer: { adapter } }).filter(
       (plugin) => (plugin as Plugin).name !== 'honox-vite-client'
     ),
